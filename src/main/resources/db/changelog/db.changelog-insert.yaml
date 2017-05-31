@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: jpc
+      changes:
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: name
+                  value: jpc
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: name
+                  value: am
