@@ -12,9 +12,15 @@ export interface Person {
     name: string;
 }
 
+export interface Domain {
+    id: number;
+    name: string;
+}
+
 export interface Role {
     id: string;
     name: string;
+    split: string;
 }
 
 export interface Territory {
@@ -35,6 +41,10 @@ export class RemoteService {
 
     getPersons(): Observable<Person[]> {
         return this.http.get(this.base + "/persons").map(r => <Person[]> r.json());
+    }
+
+    getDomains(): Observable<Domain[]> {
+        return this.http.get(this.base + "/domains").map(r => <Domain[]> r.json());
     }
 
     getRoles(): Observable<Role[]> {

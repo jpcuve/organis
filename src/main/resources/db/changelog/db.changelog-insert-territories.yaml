@@ -161,6 +161,18 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  value: ca
+              - column:
+                  name: name
+                  value: India
+              - column:
+                  name: parent_id
+                  value: c
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
                   value: d
               - column:
                   name: name

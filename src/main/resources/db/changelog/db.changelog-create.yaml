@@ -63,3 +63,6 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+              - column:
+                  name: split
+                  type: varchar(32)
