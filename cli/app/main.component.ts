@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Domain, Person, RemoteService, Role, Territory} from "./remote.service";
+import {Domain, Person, Product, RemoteService, Role, Territory} from "./remote.service";
 
 @Component({
     templateUrl: './main.component.html'
@@ -9,6 +9,7 @@ export class MainComponent implements OnInit {
     domains: Domain[] = [];
     roles: Role[] = [];
     territories: Territory[] = [];
+    products: Product[] = [];
 
     constructor(private remoteService: RemoteService){
         console.log('Main component starting now');
@@ -19,5 +20,6 @@ export class MainComponent implements OnInit {
         this.remoteService.getDomains().subscribe(ds => this.domains = ds);
         this.remoteService.getRoles().subscribe(rs => this.roles = rs);
         this.remoteService.getTerritories().subscribe(ts => this.territories = ts);
+        this.remoteService.getProducts().subscribe(ps => this.products = ps);
     }
 }

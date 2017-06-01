@@ -7,13 +7,13 @@ import javax.persistence.*;
 /**
  * Created by jpc on 31-05-17.
  */
-@Table(name = "domains")
+@Table(name = "products")
 @NamedQueries({
-        @NamedQuery(name = Domain.DOMAIN_ALL, query = "select d from Domain d order by id")
+        @NamedQuery(name = Product.PRODUCT_ALL, query = "select p from Product p order by id")
 })
 @Entity
-public class Domain {
-    public static final String DOMAIN_ALL = "domain.all";
+public class Product {
+    public static final String PRODUCT_ALL = "product.all";
     @Id
     @Column(name = "id", nullable = false)
     private Long id;

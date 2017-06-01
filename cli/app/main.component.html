@@ -4,16 +4,12 @@
 </ul>
 <table>
     <tr>
-        <th>Domains</th>
         <th>Roles</th>
         <th>Territories</th>
+        <th>Domains</th>
+        <th>Products</th>
     </tr>
     <tr>
-        <td valign="top">
-            <pre>
-                <div *ngFor="let d of domains">{{d.id}}: {{d.name}}</div>
-            </pre>
-        </td>
         <td valign="top">
             <pre>
                 <div *ngFor="let r of roles">{{r.id}}: {{r.name}} <span *ngIf="r.splitDomain">(*D)</span></div>
@@ -22,6 +18,16 @@
         <td valign="top">
             <pre>
                 <div *ngFor="let t of territories">{{t.id}}: {{t.name}}</div>
+            </pre>
+        </td>
+        <td valign="top">
+            <pre>
+                <div *ngFor="let d of domains">{{d.id}}: {{d.name}}</div>
+            </pre>
+        </td>
+        <td valign="top">
+            <pre>
+                <div *ngFor="let p of products">{{p.id}}: {{p.name}}</div>
             </pre>
         </td>
     </tr>

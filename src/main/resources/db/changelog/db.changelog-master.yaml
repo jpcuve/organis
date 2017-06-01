@@ -9,3 +9,5 @@ databaseChangeLog:
       file: db/changelog/db.changelog-insert-territories.yaml
   - include:
       file: db/changelog/db.changelog-insert-roles.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-products.yaml

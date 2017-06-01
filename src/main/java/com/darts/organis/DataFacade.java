@@ -1,9 +1,6 @@
 package com.darts.organis;
 
-import com.darts.organis.domain.Domain;
-import com.darts.organis.domain.Person;
-import com.darts.organis.domain.Role;
-import com.darts.organis.domain.Territory;
+import com.darts.organis.domain.*;
 import com.sun.org.apache.xalan.internal.xsltc.DOM;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,7 +49,7 @@ public class DataFacade {
         findAllRoles().stream()
                 .filter(Role::isSplitDomain)
                 .forEach(r -> domains.stream().forEach(d -> {
-                    final String id = String.format("%s:%s", r.getId(), d.getId());
+                    final String id = String.format("%s~%s", r.getId(), d.getId());
                     Role role = em.find(Role.class, id);
                     if (role == null){
                         role = new Role();
@@ -77,6 +74,10 @@ public class DataFacade {
 
     public List<Role> findAllRoles(){
         return em.createNamedQuery(Role.ROLE_ALL, Role.class).getResultList();
+    }
+
+    public List<Product> findAllProducts(){
+        return em.createNamedQuery(Product.PRODUCT_ALL, Product.class).getResultList();
     }
 
 }

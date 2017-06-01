@@ -311,7 +311,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: bc:1
+                  value: bc~1
               - column:
                   name: name
                   value: Analysis Trademark
@@ -323,35 +323,84 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: bc:1a
+                  value: bc~1a
               - column:
                   name: name
-                  value: Nice (ProdComp)
+                  value: Nice & ProdComp
               - column:
                   name: parent_id
-                  value: bc:1
+                  value: bc~1
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: bc:1b
+                  value: bc~1b
               - column:
                   name: name
                   value: Vienna
               - column:
                   name: parent_id
-                  value: bc:1
+                  value: bc~1
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: bc:1c
+                  value: bc~1c
               - column:
                   name: name
                   value: Locarno
               - column:
                   name: parent_id
-                  value: bc:1
+                  value: bc~1
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bd
+              - column:
+                  name: name
+                  value: Progress
+              - column:
+                  name: parent_id
+                  value: b
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: c
+              - column:
+                  name: name
+                  value: Administration
+              - column:
+                  name: parent_id
+                  value: _
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: ca
+              - column:
+                  name: name
+                  value: Human resources
+              - column:
+                  name: parent_id
+                  value: c
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: cb
+              - column:
+                  name: name
+                  value: Finance
+              - column:
+                  name: parent_id
+                  value: c
+
 
