@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Table(name = "roles")
 @NamedQueries({
-        @NamedQuery(name = Role.ROLE_ALL, query = "select r from Role r")
+        @NamedQuery(name = Role.ROLE_ALL, query = "select r from Role r order by id")
 })
 @Entity
 @JsonIgnoreProperties({"parent"})
@@ -17,7 +17,6 @@ public class Role implements NamedNode<Role> {
     public static final String ROLE_ALL = "role.all";
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     @Column(name = "name", nullable = false)
     private String name;

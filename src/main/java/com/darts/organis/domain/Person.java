@@ -7,14 +7,13 @@ import javax.persistence.*;
  */
 @Table(name = "persons")
 @NamedQueries({
-        @NamedQuery(name = Person.PERSON_ALL, query = "select p from Person p")
+        @NamedQuery(name = Person.PERSON_ALL, query = "select p from Person p order by id")
 })
 @Entity
 public class Person {
     public static final String PERSON_ALL = "person.all";
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)

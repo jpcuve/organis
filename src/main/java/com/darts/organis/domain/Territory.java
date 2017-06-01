@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Table(name = "territories")
 @NamedQueries({
-        @NamedQuery(name = Territory.TERRITORY_ALL, query = "select t from Territory t")
+        @NamedQuery(name = Territory.TERRITORY_ALL, query = "select t from Territory t order by id")
 })
 @Entity
 @JsonIgnoreProperties({"parent"})

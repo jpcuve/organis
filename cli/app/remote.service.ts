@@ -12,6 +12,16 @@ export interface Person {
     name: string;
 }
 
+export interface Role {
+    id: string;
+    name: string;
+}
+
+export interface Territory {
+    id: string;
+    name: string;
+}
+
 @Injectable()
 export class RemoteService {
     base: string;
@@ -24,6 +34,14 @@ export class RemoteService {
     }
 
     getPersons(): Observable<Person[]> {
-        return this.http.get(this.base + "/test").map(r => <Person[]> r.json());
+        return this.http.get(this.base + "/persons").map(r => <Person[]> r.json());
+    }
+
+    getRoles(): Observable<Role[]> {
+        return this.http.get(this.base + "/roles").map(r => <Role[]> r.json());
+    }
+
+    getTerritories(): Observable<Territory[]> {
+        return this.http.get(this.base + "/territories").map(t => <Territory[]> t.json());
     }
 }

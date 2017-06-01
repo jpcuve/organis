@@ -29,6 +29,114 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  value: aa
+              - column:
+                  name: name
+                  value: Planning, Priorities, Budget
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: ab
+              - column:
+                  name: name
+                  value: Pricing
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: ac
+              - column:
+                  name: name
+                  value: New clients
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: aca
+              - column:
+                  name: name
+                  value: Corporate
+              - column:
+                  name: parent_id
+                  value: ac
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: acb
+              - column:
+                  name: name
+                  value: Legal
+              - column:
+                  name: parent_id
+                  value: ac
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: acc
+              - column:
+                  name: name
+                  value: Academics
+              - column:
+                  name: parent_id
+                  value: ac
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: ad
+              - column:
+                  name: name
+                  value: Account management
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: ae
+              - column:
+                  name: name
+                  value: Marketing
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: af
+              - column:
+                  name: name
+                  value: Partnerships
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
                   value: b
               - column:
                   name: name
@@ -36,3 +144,39 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: _
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: ba
+              - column:
+                  name: name
+                  value: Collection
+              - column:
+                  name: parent_id
+                  value: b
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bb
+              - column:
+                  name: name
+                  value: Preparation
+              - column:
+                  name: parent_id
+                  value: b
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bc
+              - column:
+                  name: name
+                  value: Analysis
+              - column:
+                  name: parent_id
+                  value: b

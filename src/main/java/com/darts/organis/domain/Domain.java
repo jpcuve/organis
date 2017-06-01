@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Table(name = "domains")
 @NamedQueries({
-        @NamedQuery(name = Domain.DOMAIN_ALL, query = "select d from Domain d")
+        @NamedQuery(name = Domain.DOMAIN_ALL, query = "select d from Domain d order by id")
 })
 @Entity
 @JsonIgnoreProperties({"parent"})
@@ -17,7 +17,6 @@ public class Domain {
     public static final String DOMAIN_ALL = "domain.all";
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
