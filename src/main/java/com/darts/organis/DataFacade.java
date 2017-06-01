@@ -46,6 +46,23 @@ public class DataFacade {
         em.remove(em.getReference(clazz, pk));
     }
 
+    public void checkConsistency(){
+        // scan roles looking for domain split
+        final List<Domain> domains = findAllDomains();
+        findAllRoles().stream()
+                .filter(Role::isSplitDomain)
+                .forEach(r -> domains.stream().forEach(d -> {
+                    final String id = String.format("%s:%s", r.getId(), d.getId());
+                    Role role = em.find(Role.class, id);
+                    if (role == null){
+                        role = new Role();
+                        role.setId(id);
+                        role.setName(String.format("%s %s", r.getName(), d.getName()));
+                        em.persist(role);
+                    }
+                }));
+    }
+
     public List<Person> findAllPersons(){
         return em.createNamedQuery(Person.PERSON_ALL, Person.class).getResultList();
     }
