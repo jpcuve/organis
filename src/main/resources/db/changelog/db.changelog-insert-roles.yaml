@@ -402,5 +402,17 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: c
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: cc
+              - column:
+                  name: name
+                  value: Information Technology
+              - column:
+                  name: parent_id
+                  value: c
 
 
