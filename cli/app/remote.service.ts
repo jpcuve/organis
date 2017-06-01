@@ -39,7 +39,7 @@ export class RemoteService {
 
     constructor(private http: Http) {
         let w: Window = <Window> window;
-        let cs: string[] = (parseInt(w.location.port) >= 63342 ? ['http://', w.location.hostname, ':8080'] : [w.location.protocol, '://', w.location.host]);
+        let cs: string[] = (parseInt(w.location.port) >= 63342 ? ['http://', w.location.hostname, ':8080'] : []);
         this.base = cs.concat(['/api']).join('');
         console.info('base:', this.base);
     }
