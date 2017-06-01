@@ -16,7 +16,7 @@
         </td>
         <td valign="top">
             <pre>
-                <div *ngFor="let r of roles">{{r.id}}: {{r.name}} ({{r.split}})</div>
+                <div *ngFor="let r of roles">{{r.id}}: {{r.name}} <span *ngIf="r.splitDomain">(*D)</span></div>
             </pre>
         </td>
         <td valign="top">

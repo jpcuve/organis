@@ -64,5 +64,8 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: split
-                  type: varchar(32)
+                  name: split_domain
+                  type: boolean
+                  defaultValue: 0
+                  constraints:
+                    nullable: false

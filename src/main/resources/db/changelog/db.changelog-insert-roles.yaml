@@ -12,9 +12,6 @@ databaseChangeLog:
               - column:
                   name: name
                   value: All
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -27,9 +24,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: _
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -42,9 +36,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: a
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -57,9 +48,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: a
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -72,9 +60,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: a
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -87,9 +72,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: ac
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -102,9 +84,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: ac
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -117,9 +96,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: ac
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -132,9 +108,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: a
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -147,9 +120,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: a
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -162,9 +132,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: a
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -177,9 +144,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: _
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -192,9 +156,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: b
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -207,9 +168,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: ba
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -222,9 +180,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: baa
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -237,9 +192,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: baa
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -252,9 +204,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: baa
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -267,9 +216,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: baa
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -282,9 +228,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: ba
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -297,9 +240,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bab
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -312,9 +252,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bab
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -328,8 +265,8 @@ databaseChangeLog:
                   name: parent_id
                   value: b
               - column:
-                  name: split
-                  value: NONE
+                  name: split_domain
+                  value: true
         - insert:
             tableName: roles
             columns:
@@ -342,9 +279,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bb
-              - column:
-                  name: split
-                  value: DOMAIN
         - insert:
             tableName: roles
             columns:
@@ -358,8 +292,8 @@ databaseChangeLog:
                   name: parent_id
                   value: b
               - column:
-                  name: split
-                  value: NONE
+                  name: split_domain
+                  value: true
         - insert:
             tableName: roles
             columns:
@@ -372,9 +306,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bc
-              - column:
-                  name: split
-                  value: DOMAIN
         - insert:
             tableName: roles
             columns:
@@ -387,9 +318,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bc
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -402,9 +330,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bc:1
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -417,9 +342,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bc:1
-              - column:
-                  name: split
-                  value: NONE
         - insert:
             tableName: roles
             columns:
@@ -432,7 +354,4 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: bc:1
-              - column:
-                  name: split
-                  value: NONE
 

@@ -20,7 +20,7 @@ export interface Domain {
 export interface Role {
     id: string;
     name: string;
-    split: string;
+    splitDomain: string;
 }
 
 export interface Territory {

@@ -20,9 +20,8 @@ public class Role implements NamedNode<Role> {
     private String id;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "split")
-    @Enumerated(EnumType.STRING)
-    private RoleSplit split;
+    @Column(name = "split_domain")
+    private boolean splitDomain;
     @ManyToOne
     @JoinColumn(name = "parent_id")
     private Role parent;
@@ -45,12 +44,12 @@ public class Role implements NamedNode<Role> {
         this.name = name;
     }
 
-    public RoleSplit getSplit() {
-        return split;
+    public boolean isSplitDomain() {
+        return splitDomain;
     }
 
-    public void setSplit(RoleSplit split) {
-        this.split = split;
+    public void setSplitDomain(boolean splitDomain) {
+        this.splitDomain = splitDomain;
     }
 
     @Override
