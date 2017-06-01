@@ -1,0 +1,98 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert territories
+      author: jpc
+      changes:
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: World
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Europe
+              - column:
+                  name: parent_id
+                  value: 1
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: United States of America
+              - column:
+                  name: parent_id
+                  value: 1
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: Commonwealth
+              - column:
+                  name: parent_id
+                  value: 1
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: Latin America
+              - column:
+                  name: parent_id
+                  value: 1
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: China
+              - column:
+                  name: parent_id
+                  value: 1
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: name
+                  value: Japan
+              - column:
+                  name: parent_id
+                  value: 1
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: name
+                  value: Korea
+              - column:
+                  name: parent_id
+                  value: 1

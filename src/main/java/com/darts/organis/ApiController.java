@@ -1,6 +1,9 @@
 package com.darts.organis;
 
+import com.darts.organis.domain.Domain;
 import com.darts.organis.domain.Person;
+import com.darts.organis.domain.Role;
+import com.darts.organis.domain.Territory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +22,23 @@ public class ApiController {
     @Autowired
     private DataFacade facade;
 
-    @GetMapping("/test")
-    public List<Person> test(){
+    @GetMapping("/persons")
+    public List<Person> allPersons(){
         return facade.findAllPersons();
+    }
+
+    @GetMapping("/territories")
+    public List<Territory> allTerritories() {
+        return facade.findAllTerritories();
+    }
+
+    @GetMapping("/domains")
+    public List<Domain> allDomains(){
+        return facade.findAllDomains();
+    }
+
+    @GetMapping("/roles")
+    public List<Role> allRoles(){
+        return facade.findAllRoles();
     }
 }

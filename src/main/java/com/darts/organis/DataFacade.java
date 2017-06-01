@@ -1,6 +1,10 @@
 package com.darts.organis;
 
+import com.darts.organis.domain.Domain;
 import com.darts.organis.domain.Person;
+import com.darts.organis.domain.Role;
+import com.darts.organis.domain.Territory;
+import com.sun.org.apache.xalan.internal.xsltc.DOM;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,6 +48,18 @@ public class DataFacade {
 
     public List<Person> findAllPersons(){
         return em.createNamedQuery(Person.PERSON_ALL, Person.class).getResultList();
+    }
+
+    public List<Territory> findAllTerritories(){
+        return em.createNamedQuery(Territory.TERRITORY_ALL, Territory.class).getResultList();
+    }
+
+    public List<Domain> findAllDomains(){
+        return em.createNamedQuery(Domain.DOMAIN_ALL, Domain.class).getResultList();
+    }
+
+    public List<Role> findAllRoles(){
+        return em.createNamedQuery(Role.ROLE_ALL, Role.class).getResultList();
     }
 
 }

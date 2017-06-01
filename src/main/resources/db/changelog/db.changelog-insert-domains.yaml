@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert domains
+      author: jpc
+      changes:
+        - insert:
+            tableName: domains
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: Trademark
+        - insert:
+            tableName: domains
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Domain Name
+        - insert:
+            tableName: domains
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: Patent
+        - insert:
+            tableName: domains
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: Design and Model
+        - insert:
+            tableName: domains
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: Copyright
+        - insert:
+            tableName: domains
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: Unfair Competition
+

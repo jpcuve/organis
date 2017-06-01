@@ -1,17 +1,23 @@
 databaseChangeLog:
   - changeSet:
-      id: 1
+      id: insert persons
       author: jpc
       changes:
         - insert:
             tableName: persons
             columns:
               - column:
+                  name: id
+                  value: 1
+              - column:
                   name: name
                   value: jpc
         - insert:
             tableName: persons
             columns:
+              - column:
+                  name: id
+                  value: 2
               - column:
                   name: name
                   value: am

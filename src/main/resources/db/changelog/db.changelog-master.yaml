@@ -2,4 +2,10 @@ databaseChangeLog:
   - include:
       file: db/changelog/db.changelog-create.yaml
   - include:
-      file: db/changelog/db.changelog-insert.yaml
+      file: db/changelog/db.changelog-insert-persons.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-domains.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-territories.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-roles.yaml
