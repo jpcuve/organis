@@ -1,14 +1,13 @@
 /**
  * Created by jpc on 01-06-17.
  */
-import rollup      from 'rollup'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs    from 'rollup-plugin-commonjs';
 import uglify      from 'rollup-plugin-uglify'
 
 export default {
     entry: 'main.js',
-    dest: '../src/main/resources/static/build.js', // output a single application bundle
+    dest: '../src/main/resources/static/organis.js', // output a single application bundle
     sourceMap: false,
     format: 'iife',
     onwarn: function(warning) {
