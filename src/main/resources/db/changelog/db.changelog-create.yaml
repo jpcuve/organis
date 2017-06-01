@@ -20,13 +20,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: varchar(16)
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: parent_id
-                  type: int
+                  type: varchar(16)
               - column:
                   name: name
                   type: varchar(255)
@@ -51,13 +51,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: varchar(16)
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: parent_id
-                  type: int
+                  type: varchar(16)
               - column:
                   name: name
                   type: varchar(255)

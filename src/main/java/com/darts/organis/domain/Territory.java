@@ -17,21 +17,20 @@ public class Territory implements NamedNode<Territory> {
     public static final String TERRITORY_ALL = "territory.all";
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
     @Column(name = "name", nullable = false)
     private String name;
     @ManyToOne
     @JoinColumn(name = "parent_id")
     private Territory parent;
     @Column(name = "parent_id", insertable = false, updatable = false)
-    private Long parentId;
+    private String parentId;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -52,7 +51,7 @@ public class Territory implements NamedNode<Territory> {
         this.parent = parent;
     }
 
-    public Long getParentId() {
+    public String getParentId() {
         return parentId;
     }
 }

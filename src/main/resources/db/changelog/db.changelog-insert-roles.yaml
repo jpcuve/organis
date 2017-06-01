@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 1
+                  value: _
               - column:
                   name: name
                   value: All
@@ -17,22 +17,22 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 2
+                  value: a
               - column:
                   name: name
                   value: Sales
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: 3
+                  value: b
               - column:
                   name: name
                   value: Operations
               - column:
                   name: parent_id
-                  value: 1
+                  value: _

@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 1
+                  value: _
               - column:
                   name: name
                   value: World
@@ -17,82 +17,190 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 2
+                  value: a
               - column:
                   name: name
                   value: Europe
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: territories
             columns:
               - column:
                   name: id
-                  value: 3
+                  value: aa
+              - column:
+                  name: name
+                  value: Italy
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ab
+              - column:
+                  name: name
+                  value: Netherlands & Belgium
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ac
+              - column:
+                  name: name
+                  value: Scandinavia
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ad
+              - column:
+                  name: name
+                  value: Spain & Portugal
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ae
+              - column:
+                  name: name
+                  value: Germany
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: af
+              - column:
+                  name: name
+                  value: France
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ag
+              - column:
+                  name: name
+                  value: United Kingdom
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ah
+              - column:
+                  name: name
+                  value: Turkey
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: ai
+              - column:
+                  name: name
+                  value: Poland
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: territories
+            columns:
+              - column:
+                  name: id
+                  value: b
               - column:
                   name: name
                   value: United States of America
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: territories
             columns:
               - column:
                   name: id
-                  value: 4
+                  value: c
               - column:
                   name: name
                   value: Commonwealth
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: territories
             columns:
               - column:
                   name: id
-                  value: 5
+                  value: d
               - column:
                   name: name
                   value: Latin America
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: territories
             columns:
               - column:
                   name: id
-                  value: 6
+                  value: e
               - column:
                   name: name
                   value: China
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: territories
             columns:
               - column:
                   name: id
-                  value: 7
+                  value: f
               - column:
                   name: name
                   value: Japan
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
         - insert:
             tableName: territories
             columns:
               - column:
                   name: id
-                  value: 8
+                  value: g
               - column:
                   name: name
                   value: Korea
               - column:
                   name: parent_id
-                  value: 1
+                  value: _
