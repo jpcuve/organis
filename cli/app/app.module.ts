@@ -5,6 +5,7 @@ import {HttpModule, JsonpModule} from "@angular/http";
 
 import { AppComponent }  from './app.component';
 import { MainComponent }  from './main.component';
+import {RemoteService} from "./remote.service";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -16,7 +17,7 @@ const routes: Routes = [
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpModule, JsonpModule],
     declarations: [AppComponent,MainComponent],
-    providers: [],
+    providers: [RemoteService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
