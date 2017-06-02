@@ -6,7 +6,7 @@ import commonjs    from 'rollup-plugin-commonjs';
 import uglify      from 'rollup-plugin-uglify'
 
 export default {
-    entry: 'main.js',
+    entry: 'main-aot.js',
     dest: '../src/main/resources/static/organis.js', // output a single application bundle
     sourceMap: false,
     format: 'iife',

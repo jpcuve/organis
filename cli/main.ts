@@ -1,6 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import {AppModuleNgFactory} from "./aot/app/app.module.ngfactory";
+import { AppModule } from './app/app.module';
 
-console.log('Running AOT compiled');
-platformBrowserDynamic().bootstrapModuleFactory(AppModuleNgFactory);
+console.log('Running JIT compiled');
+platformBrowserDynamic().bootstrapModule(AppModule);
