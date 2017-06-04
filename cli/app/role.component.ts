@@ -7,13 +7,14 @@ import 'rxjs/add/observable/of';
 import {Observable} from "rxjs/Observable";
 
 @Component({
-    template: '<span>role: {{activatedRoute.snapshot.params.id}}</span>'
+    template: '<span>role: {{roleId}}</span>'
 })
 export class RoleComponent implements OnInit {
+    roleId: string;
 
     constructor(
-        private activatedRoute: ActivatedRoute,
-        private remoteService: RemoteService
+        public activatedRoute: ActivatedRoute,
+        public remoteService: RemoteService
     ){
         console.log('Role component starting now');
     }
@@ -22,6 +23,7 @@ export class RoleComponent implements OnInit {
             this.activatedRoute.params
                 .switchMap((params: Params) => {
                     console.log('params:', params['id']);
+                    this.roleId = params['id'];
                     return Observable.of('lala');
                 })
                 .subscribe((s: string) => {
