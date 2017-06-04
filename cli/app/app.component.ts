@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
     template: `
 <span>Application</span>
 <nav>
-    <a routerLink="main" routerLinkActive="active">Main</a>
+    <a [routerLink]="['main', {test: 'me'}]" routerLinkActive="active">Main</a>
     <a routerLink="domains" routerLinkActive="active">Domains</a>
     <a routerLink="territories" routerLinkActive="active">Territories</a>
 </nav>

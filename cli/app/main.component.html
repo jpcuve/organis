@@ -11,9 +11,9 @@
     </tr>
     <tr>
         <td valign="top">
-            <pre>
-                <div *ngFor="let r of roles">{{r.id}}: {{r.name}} <span *ngIf="r.splitDomain">(*D)</span></div>
-            </pre>
+            <div *ngFor="let r of roles">
+                <a routerLink="/roles/{{r.id}}">{{r.id}}</a>:{{r.name}} <span *ngIf="r.splitDomain">(*D)</span>
+            </div>
         </td>
         <td valign="top">
             <pre>
