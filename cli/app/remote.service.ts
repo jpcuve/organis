@@ -33,6 +33,11 @@ export interface Territory {
     name: string;
 }
 
+export class Manager {
+    constructor(public name: string, public sex: string){
+    }
+}
+
 @Injectable()
 export class RemoteService {
     base: string;
