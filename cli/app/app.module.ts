@@ -7,6 +7,12 @@ import { AppComponent }  from './app.component';
 import { MainComponent }  from './main.component';
 import {RemoteService} from "./remote.service";
 import {RoleComponent} from "./role.component";
+import {Observer} from "rxjs/Observer";
+import {Observable} from "rxjs/Observable";
+import {IntervalObservable} from "rxjs/observable/IntervalObservable";
+import {AnonymousSubject, Subject} from "rxjs/Subject";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {ReplaySubject} from "rxjs/ReplaySubject";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -23,4 +29,34 @@ const routes: Routes = [
     bootstrap: [AppComponent]
 })
 export class AppModule {
+    constructor(){
+        console.log('Reactive programming test');
+        let observable: Observable<string> = Observable.create((o: Observer<string>) => {
+            o.next('a');
+            o.next('b');
+            o.next('c');
+            setTimeout(() => {
+                o.next('d');
+                o.complete();
+            }, 1000);
+        });
+        let subscription = observable.subscribe(
+            (s: string) => console.log('received:', s),
+            (error: any) => console.log('error:', error),
+            () => console.log('subscription complete')
+        );
+        // subscription.unsubscribe();
+        let subject: Subject<string> = new Subject();
+        subject.subscribe((s: string) => console.log('subject 1:', s));
+        subject.subscribe((s: string) => console.log('subject 2:', s));
+        subject.next('bonjour');
+        subject.next('je');
+        subject.next('m\'appelle');
+        subject.next('jean-pierre');
+        let observable2 = IntervalObservable.create(500);
+        let subscription2 = observable2.subscribe(() => console.log("timer top"));
+        setTimeout(() => subscription2.unsubscribe(), 10000);
+        console.log('terminated');
+
+    }
 }
