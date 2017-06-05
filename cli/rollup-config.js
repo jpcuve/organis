@@ -1,9 +1,9 @@
 /**
  * Created by jpc on 01-06-17.
  */
-import nodeResolve from 'rollup-plugin-node-resolve'
-import commonjs    from 'rollup-plugin-commonjs';
-import uglify      from 'rollup-plugin-uglify'
+import nodeResolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import uglify from "rollup-plugin-uglify";
 
 export default {
     entry: 'main-aot.js',

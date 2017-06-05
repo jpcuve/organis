@@ -10,9 +10,7 @@ import {RoleComponent} from "./role.component";
 import {Observer} from "rxjs/Observer";
 import {Observable} from "rxjs/Observable";
 import {IntervalObservable} from "rxjs/observable/IntervalObservable";
-import {AnonymousSubject, Subject} from "rxjs/Subject";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import {ReplaySubject} from "rxjs/ReplaySubject";
+import { Subject} from "rxjs/Subject";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
