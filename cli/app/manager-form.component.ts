@@ -5,7 +5,7 @@ import {Observable} from "rxjs/Observable";
 
 @Component({
     selector: 'manager-form',
-    templateUrl: './manager-form.component.html',
+    templateUrl: './manager-form.component.html'
 })
 export class ManagerFormComponent implements OnInit {
     sexes: string[] = ['male', 'female'];

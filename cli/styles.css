@@ -8,3 +8,7 @@ h1 {
   color: white;
   background-color: black;
 }
+
+.ng-valid{
+  border-left: 5px solid green;
+}

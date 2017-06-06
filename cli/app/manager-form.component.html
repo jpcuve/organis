@@ -1,20 +1,14 @@
 <div class="container">
     <h1>Manager Form</h1>
-    <form #managerForm="ngForm">
+    <form #managerForm="ngForm" #formSpy>
         {{diagnostic}}
         <br/>
-        valid: {{managerForm.valid}}
-        <br/>
-        dirty: {{managerForm.dirty}}
-        <br/>
-        touched: {{managerForm.touched}}
-        <div class="form-group form-group-danger">
+        {{formSpy.className}}
+        <div class="form-group">
             <label for="name" class="control-label">Name</label>
-            <div>
-                <input [(ngModel)]="model.name" #spy="ngModel" type="text" class="form-control" id="name" name="name" required="required"/>
-            </div>
+            <input [(ngModel)]="model.name" #spy type="text" class="form-control" id="name" name="name" required="required"/>
             <br/>
-            {{spy.valid}}
+            {{spy.className}}
         </div>
         <div class="form-group">
             <label for="sex" class="control-label">Sex</label>
@@ -25,6 +19,6 @@
         <div class="has-warning">
             This is a warning
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" *ngIf="managerForm.valid">Submit</button>
     </form>
 </div>
