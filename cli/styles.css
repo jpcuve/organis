@@ -53,10 +53,51 @@ h1 {
 }
 
 .tree-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
 
 }
 
-.tree-box li {
-  color: var(--color-info);
+.tree-box ul li {
+  position: relative;
 }
 
+.tree-box ul li:before {
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 10px;
+  height: 0.5em;
+  content: '';
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: var(--color-danger);
+}
+
+.tree-box ul li:after {
+  position: absolute;
+  left: -15px;
+  bottom: -7px;
+  width: 15px;
+  height: 100%;
+  content: '';
+  border-left: 1px solid var(--color-warning);
+}
+
+.tree-box ul li:last-child:after {
+  display: none;
+}
+
+.tree-box ul li.root{
+  margin: 0 0 0 -20px;
+  padding: 10px 0;
+}
+
+.tree-box ul li.root:before {
+  display:none;
+}
+
+.tree-box ul li.root:after {
+  display:none;
+}
