@@ -7,6 +7,11 @@ import {Http} from "@angular/http";
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
+export interface TreeNode {
+    name: string;
+    childCount: number;
+}
+
 export interface Person {
     id: number;
     name: string;
