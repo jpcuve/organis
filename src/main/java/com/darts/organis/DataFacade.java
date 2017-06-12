@@ -54,6 +54,7 @@ public class DataFacade {
                     if (role == null){
                         role = new Role();
                         role.setId(id);
+                        role.setParent(r);
                         role.setName(String.format("%s %s", r.getName(), d.getName()));
                         em.persist(role);
                     }

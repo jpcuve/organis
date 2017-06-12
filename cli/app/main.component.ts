@@ -17,23 +17,15 @@ export class MainComponent implements OnInit {
 
     pack(nodeList: NamedNode[]): NamedNode {
         let top: NamedNode = null;
-        for (let n of nodeList){
-            let t: boolean = true;
-            for (let p of nodeList){
-                if (n !== p){
-                    if (n.parentId === p.id){
-                        if (!p.children){
-                            p.children = [];
-                        }
-                        p.children.push(n);
-                        t = false;
-                    }
-                }
-            }
-            if (t){
+        var map: { [key: string]: NamedNode } = {};
+        nodeList.forEach(n => {
+            map[n.id] = n;
+            n.children = [];
+            if (!n.parentId){
                 top = n;
             }
-        }
+        });
+        nodeList.filter(n => n.parentId).forEach(n => map[n.parentId].children.push(n));
         return top;
     }
 
