@@ -5,7 +5,12 @@ import {Component} from '@angular/core';
     template: `
 <span>Application</span>
 <div class="tree-box">
-    <tree [node]="top"></tree>
+    <ul class="root">
+        <span>top node</span>
+        <li>
+            <tree [node]="top"></tree>
+        </li>
+    </ul>
 </div>
 <nav>
     <a [routerLink]="['main', {test: 'me'}]" routerLinkActive="active">Main</a>
