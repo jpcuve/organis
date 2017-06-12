@@ -7,9 +7,11 @@ import {Http} from "@angular/http";
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-export interface TreeNode {
+export interface NamedNode {
+    id: string;
+    parentId?: string;
     name: string;
-    childCount: number;
+    children?: NamedNode[];
 }
 
 export interface Person {
@@ -33,9 +35,7 @@ export interface Role {
     splitDomain: string;
 }
 
-export interface Territory {
-    id: string;
-    name: string;
+export interface Territory extends NamedNode {
 }
 
 export class Manager {
@@ -73,4 +73,5 @@ export class RemoteService {
     getTerritories(): Observable<Territory[]> {
         return this.http.get(this.base + "/territories").map(t => <Territory[]> t.json());
     }
+
 }

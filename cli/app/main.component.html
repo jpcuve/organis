@@ -19,9 +19,15 @@
             </div>
         </td>
         <td valign="top">
-            <pre>
-                <div *ngFor="let t of territories">{{t.id}}: {{t.name}}</div>
-            </pre>
+            <div class="tree-box">
+                <ul class="root">
+                    <li>
+                        <span>World</span>
+                        <tree [node]="territory"></tree>
+                    </li>
+                </ul>
+            </div>
+
         </td>
         <td valign="top">
             <pre>

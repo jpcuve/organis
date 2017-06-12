@@ -6,10 +6,11 @@ import {Component} from '@angular/core';
 <span>Application</span>
 <div class="tree-box">
     <ul class="root">
+    <li>
         <span>top node</span>
-        <li>
-            <tree [node]="top"></tree>
-        </li>
+        <tree [node]="top"></tree>
+    
+    </li>
     </ul>
 </div>
 <nav>
@@ -29,37 +30,31 @@ export class AppComponent {
                 children: [
                     {
                         name: 'aa',
-                        children: []
                     },
                     {
                         name: 'ab',
-                        children: []
                     }
                 ]
             },
             {
                 name: 'b',
-                children: []
             },
             {
                 name: 'c',
                 children: [
                     {
                         name: 'ca',
-                        children: []
                     },
                     {
                         name: 'cb',
                         children: [
                             {
                                 name: 'cba',
-                                children: []
                             }
                         ]
                     },
                     {
                         name: 'cc',
-                        children: []
                     },
                 ]
             },

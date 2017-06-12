@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from "@angular/core";
-import {TreeNode} from "./remote.service";
+import {NamedNode} from "./remote.service";
 
 @Component({
     selector: 'tree',
@@ -21,7 +21,7 @@ export class TreeComponent implements OnInit {
         console.log('Tree component starting now');
     }
 
-    chidren(): TreeNode[]{
+    chidren(): NamedNode[]{
         return [];
     }
 
