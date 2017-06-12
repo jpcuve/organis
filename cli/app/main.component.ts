@@ -7,8 +7,7 @@ import {Domain, NamedNode, Person, Product, RemoteService, Role, Territory} from
 export class MainComponent implements OnInit {
     persons: Person[] = [];
     domains: Domain[] = [];
-    roles: Role[] = [];
-    territories: Territory[] = [];
+    role: Role = {id: '', name:'top', splitDomain: '', children:[]};
     territory: Territory = {id: '', name:'top', children:[]};
     products: Product[] = [];
 
@@ -41,11 +40,8 @@ export class MainComponent implements OnInit {
     ngOnInit(): void {
         this.remoteService.getPersons().subscribe(ps => this.persons = ps);
         this.remoteService.getDomains().subscribe(ds => this.domains = ds);
-        this.remoteService.getRoles().subscribe(rs => this.roles = rs);
-        this.remoteService.getTerritories().subscribe(ts => {
-            this.territories = ts;
-            this.territory = this.pack(ts);
-        });
+        this.remoteService.getRoles().subscribe(rs => this.role = <Role> this.pack(rs));
+        this.remoteService.getTerritories().subscribe(ts => this.territory = this.pack(ts));
         this.remoteService.getProducts().subscribe(ps => this.products = ps);
     }
 }

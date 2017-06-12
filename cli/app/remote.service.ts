@@ -29,9 +29,7 @@ export interface Product {
     name: string;
 }
 
-export interface Role {
-    id: string;
-    name: string;
+export interface Role extends NamedNode {
     splitDomain: string;
 }
 
