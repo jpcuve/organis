@@ -13,6 +13,7 @@ import {IntervalObservable} from "rxjs/observable/IntervalObservable";
 import { Subject} from "rxjs/Subject";
 import {FormsModule} from "@angular/forms";
 import {ManagerFormComponent} from "./manager-form.component";
+import {TreeComponent} from "./tree.component";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpModule, JsonpModule, FormsModule],
-    declarations: [AppComponent,MainComponent, RoleComponent, ManagerFormComponent],
+    declarations: [AppComponent,MainComponent, RoleComponent, TreeComponent, ManagerFormComponent],
     providers: [RemoteService],
     bootstrap: [AppComponent]
 })

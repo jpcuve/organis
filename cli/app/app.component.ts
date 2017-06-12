@@ -4,6 +4,9 @@ import {Component} from '@angular/core';
     selector: 'app',
     template: `
 <span>Application</span>
+<div class="tree-box">
+    <tree [node]="top"></tree>
+</div>
 <nav>
     <a [routerLink]="['main', {test: 'me'}]" routerLinkActive="active">Main</a>
     <a routerLink="domains" routerLinkActive="active">Domains</a>
@@ -13,6 +16,50 @@ import {Component} from '@angular/core';
 `
 })
 export class AppComponent {
+    top: any = {
+        name: 'top',
+        children: [
+            {
+                name: 'a',
+                children: [
+                    {
+                        name: 'aa',
+                        children: []
+                    },
+                    {
+                        name: 'ab',
+                        children: []
+                    }
+                ]
+            },
+            {
+                name: 'b',
+                children: []
+            },
+            {
+                name: 'c',
+                children: [
+                    {
+                        name: 'ca',
+                        children: []
+                    },
+                    {
+                        name: 'cb',
+                        children: [
+                            {
+                                name: 'cba',
+                                children: []
+                            }
+                        ]
+                    },
+                    {
+                        name: 'cc',
+                        children: []
+                    },
+                ]
+            },
+        ]
+    };
 
     constructor(
     ){

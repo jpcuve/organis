@@ -5,16 +5,16 @@ import {TreeNode} from "./remote.service";
     selector: 'tree',
     template: `
 <ul>
-    <li *ngFor="let c of children()">
+    <li *ngFor="let c of node.children">
         <span>{{c.name}}</span>
-        <tree *ngIf="c.childCount > 0" [value]="c"></tree>
+        <tree [node]="c"></tree>
     </li>
 </ul>
 `
 })
 export class TreeComponent implements OnInit {
     @Input()
-    value: TreeNode;
+    node: any;
 
     constructor(
     ){
