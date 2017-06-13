@@ -14,6 +14,7 @@ import { Subject} from "rxjs/Subject";
 import {FormsModule} from "@angular/forms";
 import {ManagerFormComponent} from "./manager-form.component";
 import {TreeComponent} from "./tree.component";
+import {Zap} from "./zap.directive";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -25,7 +26,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpModule, JsonpModule, FormsModule],
-    declarations: [AppComponent,MainComponent, RoleComponent, TreeComponent, ManagerFormComponent],
+    declarations: [AppComponent,MainComponent, RoleComponent, TreeComponent, ManagerFormComponent, Zap],
     providers: [RemoteService],
     bootstrap: [AppComponent]
 })
