@@ -9,7 +9,7 @@ import {Component} from '@angular/core';
     <a routerLink="domains" routerLinkActive="active">Domains</a>
     <a routerLink="territories" routerLinkActive="active">Territories</a>
 </nav>
-<span *zap="'test'">Coucou</span>
+<span *zap="'test'; count: 19">Coucou</span>
 <router-outlet></router-outlet>
 `
 })

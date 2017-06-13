@@ -1,5 +1,4 @@
 import {Directive, Input, TemplateRef, ViewContainerRef} from "@angular/core";
-import {NamedNode} from "./remote.service";
 
 @Directive({
     selector: '[zap]'
@@ -16,10 +15,18 @@ export class Zap {
         this.updateView();
     }
 
+    @Input()
+    set zapCount(count: number){
+        this.context.count = count;
+        this.updateView();
+    }
+
     private updateView(): void {
         this.viewContainer.clear();
-        if (this.context.$implicit){ // a top node is set
-            this.viewContainer.createEmbeddedView(this.template, this.context);
+        if (this.context.$implicit){ // if there is a string, the template is added to the view three times
+            for (let i = 0; i < this.context.count; i++){
+                this.viewContainer.createEmbeddedView(this.template, this.context);
+            }
         }
     }
 }
@@ -27,4 +34,5 @@ export class Zap {
 export class ZapContext {
     $implicit: string = null;
     node: string = null;
+    count: number = 3;
 }
