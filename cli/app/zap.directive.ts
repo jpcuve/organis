@@ -10,7 +10,7 @@ export class Zap {
     }
 
     @Input()
-    set zap(topNode: string){
+    set zap(topNode: string){ // implicit if the setter same name as the class
         this.context.$implicit = this.context.node = topNode;
         this.updateView();
     }
@@ -23,7 +23,7 @@ export class Zap {
 
     private updateView(): void {
         this.viewContainer.clear();
-        if (this.context.$implicit){ // if there is a string, the template is added to the view three times
+        if (this.context.$implicit){ // if there is a string, the template is added to the view count times
             for (let i = 0; i < this.context.count; i++){
                 this.viewContainer.createEmbeddedView(this.template, this.context);
             }
