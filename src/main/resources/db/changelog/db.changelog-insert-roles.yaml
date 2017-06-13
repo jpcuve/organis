@@ -137,6 +137,18 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  value: ag
+              - column:
+                  name: name
+                  value: SalesForce
+              - column:
+                  name: parent_id
+                  value: a
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
                   value: b
               - column:
                   name: name
@@ -264,9 +276,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: b
-              - column:
-                  name: split_domain
-                  value: true
         - insert:
             tableName: roles
             columns:
@@ -284,6 +293,45 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  value: bbb
+              - column:
+                  name: name
+                  value: Execution
+              - column:
+                  name: parent_id
+                  value: bb
+              - column:
+                  name: split_domain
+                  value: true
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bbc
+              - column:
+                  name: name
+                  value: Special
+              - column:
+                  name: parent_id
+                  value: bb
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bbca
+              - column:
+                  name: name
+                  value: Referencing
+              - column:
+                  name: parent_id
+                  value: bbc
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
                   value: bc
               - column:
                   name: name
@@ -291,9 +339,6 @@ databaseChangeLog:
               - column:
                   name: parent_id
                   value: b
-              - column:
-                  name: split_domain
-                  value: true
         - insert:
             tableName: roles
             columns:
@@ -311,55 +356,118 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: bc~1
+                  value: bcb
               - column:
                   name: name
-                  value: Analysis Trademark
+                  value: Execution
               - column:
                   name: parent_id
                   value: bc
+              - column:
+                  name: split_domain
+                  value: true
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: bc~1a
+                  value: bcb~1
+              - column:
+                  name: name
+                  value: Execution Trademark
+              - column:
+                  name: parent_id
+                  value: bcb
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bcb~1a
               - column:
                   name: name
                   value: Nice & ProdComp
               - column:
                   name: parent_id
-                  value: bc~1
+                  value: bcb~1
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: bc~1b
+                  value: bcb~1b
               - column:
                   name: name
                   value: Vienna
               - column:
                   name: parent_id
-                  value: bc~1
+                  value: bcb~1
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: bc~1c
+                  value: bcb~1c
               - column:
                   name: name
                   value: Locarno
               - column:
                   name: parent_id
-                  value: bc~1
+                  value: bcb~1
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bcb~1d
+              - column:
+                  name: name
+                  value: Other
+              - column:
+                  name: parent_id
+                  value: bcb~1
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bcb~3
+              - column:
+                  name: name
+                  value: Execution Patent
+              - column:
+                  name: parent_id
+                  value: bcb
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: bcb~3a
+              - column:
+                  name: name
+                  value: Claim Construction
+              - column:
+                  name: parent_id
+                  value: bcb~3
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
                   value: bd
+              - column:
+                  name: name
+                  value: Quality Assurance
+              - column:
+                  name: parent_id
+                  value: b
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: be
               - column:
                   name: name
                   value: Progress
@@ -374,6 +482,18 @@ databaseChangeLog:
                   value: c
               - column:
                   name: name
+                  value: Product Development
+              - column:
+                  name: parent_id
+                  value: _
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: d
+              - column:
+                  name: name
                   value: Administration
               - column:
                   name: parent_id
@@ -383,36 +503,36 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: ca
+                  value: da
               - column:
                   name: name
                   value: Human resources
               - column:
                   name: parent_id
-                  value: c
+                  value: d
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: cb
+                  value: db
               - column:
                   name: name
                   value: Finance
               - column:
                   name: parent_id
-                  value: c
+                  value: d
         - insert:
             tableName: roles
             columns:
               - column:
                   name: id
-                  value: cc
+                  value: dc
               - column:
                   name: name
                   value: Information Technology
               - column:
                   name: parent_id
-                  value: c
+                  value: d
 
 
