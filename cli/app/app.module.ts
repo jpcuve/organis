@@ -15,6 +15,7 @@ import {FormsModule} from "@angular/forms";
 import {ManagerFormComponent} from "./manager-form.component";
 import {TreeComponent} from "./tree.component";
 import {Zap} from "./zap.directive";
+import {Pair} from "./pair.directive";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -26,7 +27,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpModule, JsonpModule, FormsModule],
-    declarations: [AppComponent,MainComponent, RoleComponent, TreeComponent, ManagerFormComponent, Zap],
+    declarations: [AppComponent,MainComponent, RoleComponent, TreeComponent, ManagerFormComponent, Zap, Pair],
     providers: [RemoteService],
     bootstrap: [AppComponent]
 })
