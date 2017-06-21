@@ -14,7 +14,7 @@ import {NamedNode} from "./remote.service";
 })
 export class TreeComponent implements OnInit {
     @Input()
-    node: any;
+    node: NamedNode;
 
     constructor(
     ){
