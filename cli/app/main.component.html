@@ -25,7 +25,7 @@
                 <ul class="root">
                     <li>
                         <span>All</span>
-                        <tree [node]="role"></tree>
+                        <tree [node]="role" [node-component]="roleComponent"></tree>
                     </li>
                 </ul>
             </div>
@@ -39,7 +39,7 @@
                 <ul class="root">
                     <li>
                         <span>World</span>
-                        <tree [node]="territory"></tree>
+                        <tree [node]="territory" [node-component]="territoryComponent"></tree>
                     </li>
                 </ul>
             </div>

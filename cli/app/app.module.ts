@@ -19,6 +19,7 @@ import {OuterComponent} from "./outer.component";
 import {TreeComponent} from "./tree.component";
 import {AnchorDirective} from "./anchor.directive";
 import {InnerComponent} from "./inner.component";
+import {TerritoryComponent} from "./territory.component";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -38,12 +39,16 @@ const routes: Routes = [
         ManagerFormComponent,
         OuterComponent,
         InnerComponent,
+        TerritoryComponent,
+        RoleComponent,
         Zap,
         Pair,
         AnchorDirective
     ],
     entryComponents: [
-        InnerComponent
+        InnerComponent,
+        TerritoryComponent,
+        RoleComponent
     ],
     providers: [RemoteService],
     bootstrap: [AppComponent]
