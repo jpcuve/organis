@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Type} from '@angular/core';
 import {Domain, NamedNode, Person, Product, RemoteService, Role, Territory} from "./remote.service";
+import {InnerComponent} from "./inner.component";
 
 @Component({
     templateUrl: './main.component.html'
@@ -10,6 +11,7 @@ export class MainComponent implements OnInit {
     role: Role = {id: '', name:'top', splitDomain: '', children:[]};
     territory: Territory = {id: '', name:'top', children:[]};
     products: Product[] = [];
+    innerComponent: Type<InnerComponent> = InnerComponent;
 
     constructor(private remoteService: RemoteService){
         console.log('Main component starting now');

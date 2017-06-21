@@ -18,6 +18,7 @@ import {Pair} from "./pair.directive";
 import {OuterComponent} from "./outer.component";
 import {TreeComponent} from "./tree.component";
 import {AnchorDirective} from "./anchor.directive";
+import {InnerComponent} from "./inner.component";
 
 const routes: Routes = [
     { path: 'main', component: MainComponent },
@@ -36,12 +37,13 @@ const routes: Routes = [
         TreeComponent,
         ManagerFormComponent,
         OuterComponent,
+        InnerComponent,
         Zap,
         Pair,
         AnchorDirective
     ],
     entryComponents: [
-        ManagerFormComponent
+        InnerComponent
     ],
     providers: [RemoteService],
     bootstrap: [AppComponent]

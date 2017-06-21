@@ -1,17 +1,24 @@
 /**
  * Created by jpc on 21-06-17.
  */
-import {AfterViewInit, Component, ComponentFactoryResolver, ViewChild} from "@angular/core";
+import {
+    AfterViewInit, Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, Input, Type,
+    ViewChild
+} from "@angular/core";
 import {AnchorDirective} from "./anchor.directive";
-import {ManagerFormComponent} from "./manager-form.component";
+import {InnerComponent} from "./inner.component";
 
 @Component({
     selector: 'outer',
-    template: '<span>The outer component<br/><ng-template anchor></ng-template></span>'
+    template: '<span>begin outer component<br/><ng-template anchor></ng-template><br/>end outer component</span>'
 })
 export class OuterComponent implements AfterViewInit {
     @ViewChild(AnchorDirective)
     anchor: AnchorDirective;
+    @Input("inner")
+    test: string;
+    @Input("inner-component")
+    innerComponent: Type<InnerComponent>;
 
     constructor(private componentFactoryResolver: ComponentFactoryResolver){
     }
@@ -22,11 +29,12 @@ export class OuterComponent implements AfterViewInit {
     }
 
     loadComponent(): void {
-        let managerFormComponentFactory = this.componentFactoryResolver.resolveComponentFactory(ManagerFormComponent);
+        console.log("inner:", this.test);
+        let componentFactory: ComponentFactory<InnerComponent> = this.componentFactoryResolver.resolveComponentFactory(this.innerComponent);
         let viewContainer = this.anchor.viewContainer;
         viewContainer.clear();
-        let managerFormComponentRef = viewContainer.createComponent(managerFormComponentFactory);
-        let managerFormComponent = <ManagerFormComponent> managerFormComponentRef.instance;
+        let componentRef: ComponentRef<InnerComponent> = viewContainer.createComponent(componentFactory);
+        let component = componentRef.instance;
 
 
     }
