@@ -9,12 +9,7 @@
     <tr>
         <td valign="top">
             <div class="tree-box">
-                <ul class="root">
-                    <li>
-                        <span>All</span>
-                        <tree [node]="role" [node-component]="roleComponent"></tree>
-                    </li>
-                </ul>
+                <tree [node]="role" [node-component]="roleComponent"></tree>
             </div>
 
             <div *ngFor="let r of roles">
@@ -23,12 +18,7 @@
         </td>
         <td valign="top">
             <div class="tree-box">
-                <ul class="root">
-                    <li>
-                        <span>World</span>
-                        <tree [node]="territory" [node-component]="territoryComponent"></tree>
-                    </li>
-                </ul>
+                <tree [node]="territory" [node-component]="territoryComponent"></tree>
             </div>
 
         </td>

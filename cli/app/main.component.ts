@@ -10,8 +10,8 @@ import {RoleComponent} from "./role.component";
 export class MainComponent implements OnInit {
     persons: Person[] = [];
     domains: Domain[] = [];
-    role: Role = {id: '', name:'top', splitDomain: '', children:[]};
-    territory: Territory = {id: '', name:'top', children:[]};
+    role: Role = {id: '', name:'All', splitDomain: '', children:[]};
+    territory: Territory = {id: '', name:'World', children:[]};
     products: Product[] = [];
     innerComponent: Type<InnerComponent> = InnerComponent;
     territoryComponent: Type<TerritoryComponent> = TerritoryComponent;
