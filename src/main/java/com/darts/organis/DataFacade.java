@@ -48,7 +48,7 @@ public class DataFacade {
         final List<Domain> domains = findAllDomains();
         findAllRoles().stream()
                 .filter(Role::isSplitDomain)
-                .forEach(r -> domains.stream().forEach(d -> {
+                .forEach(r -> domains.forEach(d -> {
                     final String id = String.format("%s~%s", r.getId(), d.getId());
                     Role role = em.find(Role.class, id);
                     if (role == null){
