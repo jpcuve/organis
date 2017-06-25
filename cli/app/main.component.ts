@@ -23,7 +23,7 @@ export class MainComponent implements OnInit {
 
     pack(nodeList: NamedNode[]): NamedNode {
         let top: NamedNode = null;
-        var map: { [key: string]: NamedNode } = {};
+        let map: { [key: string]: NamedNode } = {};
         nodeList.forEach(n => {
             map[n.id] = n;
             n.children = [];
