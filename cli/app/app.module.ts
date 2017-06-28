@@ -57,6 +57,7 @@ const routes: Routes = [
 })
 export class AppModule {
     constructor(){
+/*
         console.log('Reactive programming test');
         let observable: Observable<string> = Observable.create((o: Observer<string>) => {
             o.next('a');
@@ -84,6 +85,7 @@ export class AppModule {
         let subscription2 = observable2.subscribe(() => console.log("timer top"));
         setTimeout(() => subscription2.unsubscribe(), 10000);
         console.log('terminated');
+*/
 
     }
 }
