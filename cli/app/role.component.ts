@@ -4,7 +4,7 @@ import {NamedNodeComponent} from "./named-node.component";
 import {Role} from "./remote.service";
 
 @Component({
-    template: `<span><a [routerLink]="['/roles']" [queryParams]="{ id: role.id}">{{role.name}}</a></span>`
+    template: `<span><a [routerLink]="['/roles', role.id]">{{role.name}}</a></span>`
 })
 export class RoleComponent extends NamedNodeComponent {
     get role(): Role {

@@ -21,12 +21,14 @@ import {AnchorDirective} from "./anchor.directive";
 import {InnerComponent} from "./inner.component";
 import {TerritoryComponent} from "./territory.component";
 import {RoleViewComponent} from "./role-view.component";
+import {TerritoryViewComponent} from "./territory-view.component";
 
 const routes: Routes = [
     { path: 'main', component: MainViewComponent },
     { path: 'domains', component: MainViewComponent },
-    { path: 'territories', component: MainViewComponent },
+    { path: 'products', component: MainViewComponent },
     { path: 'roles/:id', component: RoleViewComponent },
+    { path: 'territories/:id', component: TerritoryViewComponent },
     { path: '**', component: MainViewComponent }
 ];
 
@@ -35,13 +37,14 @@ const routes: Routes = [
     declarations: [
         AppViewComponent,
         MainViewComponent,
+        RoleViewComponent,
+        TerritoryViewComponent,
         RoleComponent,
         TreeComponent,
         ManagerFormComponent,
         OuterComponent,
         InnerComponent,
         TerritoryComponent,
-        RoleViewComponent,
         RoleComponent,
         Zap,
         Pair,
