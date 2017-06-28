@@ -25,13 +25,8 @@ export class TreeComponent implements OnInit, AfterViewInit {
     @Input("node-component")
     nodeComponent: Type<NamedNodeComponent>;
 
-
     constructor(private componentFactoryResolver: ComponentFactoryResolver){
         console.log('Tree component starting now');
-    }
-
-    chidren(): NamedNode[]{
-        return [];
     }
 
     ngOnInit(): void {
@@ -40,6 +35,7 @@ export class TreeComponent implements OnInit, AfterViewInit {
 
 
     ngAfterViewInit(): void {
+        // had the loadComponent call before I moved it to ngOnInit
     }
 
     loadComponent(): void {

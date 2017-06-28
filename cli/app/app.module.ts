@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpModule, JsonpModule} from "@angular/http";
 
-import { AppComponent }  from './app.component';
-import { MainComponent }  from './main.component';
+import {AppViewComponent}  from './app-view.component';
+import {MainViewComponent}  from './main-view.component';
 import {RemoteService} from "./remote.service";
 import {RoleComponent} from "./role.component";
 import {Observer} from "rxjs/Observer";
@@ -20,26 +20,28 @@ import {TreeComponent} from "./tree.component";
 import {AnchorDirective} from "./anchor.directive";
 import {InnerComponent} from "./inner.component";
 import {TerritoryComponent} from "./territory.component";
+import {RoleViewComponent} from "./role-view.component";
 
 const routes: Routes = [
-    { path: 'main', component: MainComponent },
-    { path: 'domains', component: MainComponent },
-    { path: 'territories', component: MainComponent },
-    { path: 'roles/:id', component: RoleComponent },
-    { path: '**', component: MainComponent }
+    { path: 'main', component: MainViewComponent },
+    { path: 'domains', component: MainViewComponent },
+    { path: 'territories', component: MainViewComponent },
+    { path: 'roles/:id', component: RoleViewComponent },
+    { path: '**', component: MainViewComponent }
 ];
 
 @NgModule({
     imports: [BrowserModule, RouterModule.forRoot(routes), HttpModule, JsonpModule, FormsModule],
     declarations: [
-        AppComponent,
-        MainComponent,
+        AppViewComponent,
+        MainViewComponent,
         RoleComponent,
         TreeComponent,
         ManagerFormComponent,
         OuterComponent,
         InnerComponent,
         TerritoryComponent,
+        RoleViewComponent,
         RoleComponent,
         Zap,
         Pair,
@@ -51,7 +53,7 @@ const routes: Routes = [
         RoleComponent
     ],
     providers: [RemoteService],
-    bootstrap: [AppComponent]
+    bootstrap: [AppViewComponent]
 })
 export class AppModule {
     constructor(){

@@ -5,9 +5,9 @@ import {TerritoryComponent} from "./territory.component";
 import {RoleComponent} from "./role.component";
 
 @Component({
-    templateUrl: './main.component.html'
+    templateUrl: './main-view.component.html'
 })
-export class MainComponent implements OnInit {
+export class MainViewComponent implements OnInit {
     persons: Person[] = [];
     domains: Domain[] = [];
     role: Role = {id: '', name:'All', splitDomain: '', children:[]};
