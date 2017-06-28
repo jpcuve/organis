@@ -1,7 +1,5 @@
 package com.darts.organis.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 
 /**
