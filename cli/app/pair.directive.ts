@@ -1,4 +1,4 @@
-import {Directive, Input, TemplateRef, ViewContainerRef} from "@angular/core";
+import {Directive, ElementRef, Input, TemplateRef, ViewContainerRef} from "@angular/core";
 
 @Directive({
     selector: '[pair]'
@@ -32,6 +32,8 @@ export class Pair {
     private updateView(): void {
         if (this.one && this.two){
             this.viewContainer.clear();
+            let root: any = this.viewContainer.element.nativeElement;
+            root.appendChild();
             this.viewContainer.createEmbeddedView(this.one, this.context);
             this.viewContainer.createEmbeddedView(this.two, this.context);
         }
