@@ -18,7 +18,7 @@ public class OrganisApplication extends SpringBootServletInitializer implements 
 
     @Bean
     public ServletRegistrationBean facesServlet(){
-        final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new FacesServlet(), "*.xhtml");
+        final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new FacesServlet(), "/faces/*");
         servletRegistrationBean.setName("Faces Servlet");
         servletRegistrationBean.setLoadOnStartup(1);
         return servletRegistrationBean;
