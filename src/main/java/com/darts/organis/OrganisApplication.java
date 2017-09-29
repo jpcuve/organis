@@ -1,8 +1,8 @@
 package com.darts.organis;
 
+import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
@@ -19,14 +19,16 @@ public class OrganisApplication extends SpringBootServletInitializer implements 
     @Bean
     public ServletRegistrationBean facesServlet(){
         final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new FacesServlet(), "*.xhtml");
+        servletRegistrationBean.setName("Faces Servlet");
         servletRegistrationBean.setLoadOnStartup(1);
         return servletRegistrationBean;
     }
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        builder.sources();
-        return super.configure(builder);
+    @Bean
+    public static CustomScopeConfigurer customScopes(){
+        final CustomScopeConfigurer customScopeConfigurer = new CustomScopeConfigurer();
+        customScopeConfigurer.addScope("view", new ViewScope());
+        return customScopeConfigurer;
     }
 
     @Override
