@@ -10,10 +10,6 @@
             <div class="tree-box">
                 <tree [node]="role" [node-component]="roleComponent"></tree>
             </div>
-
-            <div *ngFor="let r of roles">
-                <a routerLink="/roles/{{r.id}}">{{r.id}}</a>:{{r.name}} <span *ngIf="r.splitDomain">(*D)</span>
-            </div>
         </td>
         <td valign="top">
             <div class="tree-box">

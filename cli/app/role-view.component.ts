@@ -7,7 +7,7 @@ import 'rxjs/add/observable/of';
 import {Observable} from "rxjs/Observable";
 
 @Component({
-    template: `<span>role: {{activatedRoute.snapshot.params.id}}</span>`
+    template: `<span>role: {{activatedRoute.snapshot.params['id']}}</span>`
 })
 export class RoleViewComponent implements OnInit {
 

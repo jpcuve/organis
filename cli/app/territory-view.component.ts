@@ -7,7 +7,7 @@ import 'rxjs/add/observable/of';
 import {Observable} from "rxjs/Observable";
 
 @Component({
-    template: `<span>territory: {{activatedRoute.snapshot.params.id}}</span>`
+    template: `<span>territory: {{activatedRoute.snapshot.params['id']}}</span>`
 })
 export class TerritoryViewComponent implements OnInit {
 
