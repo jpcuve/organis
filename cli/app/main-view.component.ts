@@ -3,6 +3,7 @@ import {Domain, NamedNode, Person, Product, RemoteService, Role, Territory} from
 import {InnerComponent} from "./inner.component";
 import {TerritoryComponent} from "./territory.component";
 import {RoleComponent} from "./role.component";
+import {MenuItem} from "primeng/primeng";
 
 @Component({
     templateUrl: './main-view.component.html'
@@ -16,6 +17,7 @@ export class MainViewComponent implements OnInit {
     innerComponent: Type<InnerComponent> = InnerComponent;
     territoryComponent: Type<TerritoryComponent> = TerritoryComponent;
     roleComponent: Type<RoleComponent> = RoleComponent;
+    items: MenuItem[];
 
     constructor(private remoteService: RemoteService){
         console.log('Main component starting now');
@@ -41,5 +43,13 @@ export class MainViewComponent implements OnInit {
         this.remoteService.getRoles().subscribe(rs => this.role = <Role> this.pack(rs));
         this.remoteService.getTerritories().subscribe(ts => this.territory = this.pack(ts));
         this.remoteService.getProducts().subscribe(ps => this.products = ps);
-    }
+        this.items = [];
+        this.items.push({label:'Categories'});
+        this.items.push({label:'Sports'});
+        this.items.push({label:'Football'});
+        this.items.push({label:'Countries'});
+        this.items.push({label:'Spain'});
+        this.items.push({label:'F.C. Barcelona'});
+        this.items.push({label:'Squad'});
+        this.items.push({label:'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi'});    }
 }
