@@ -2,9 +2,9 @@ import {
     AfterViewInit, Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, Input, OnInit, Type,
     ViewChild
 } from "@angular/core";
-import {NamedNode} from "./remote.service";
 import {AnchorDirective} from "./anchor.directive";
 import {NamedNodeComponent} from "./named-node.component";
+import {TreeNamedNode} from "./domain/TreeNamedNode";
 
 @Component({
     selector: 'tree',
@@ -19,7 +19,7 @@ import {NamedNodeComponent} from "./named-node.component";
 })
 export class TreeComponent implements OnInit, AfterViewInit {
     @Input()
-    node: NamedNode;
+    node: TreeNamedNode;
     @ViewChild(AnchorDirective)
     anchor: AnchorDirective;
     @Input("node-component")

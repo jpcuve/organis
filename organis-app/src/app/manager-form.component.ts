@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
-import {ActivatedRoute, Params} from "@angular/router";
-import {Manager, RemoteService} from "./remote.service";
-import {Observable} from "rxjs/Observable";
+import {ActivatedRoute} from "@angular/router";
+import {RemoteService} from "./remote.service";
+import {Manager} from "./domain";
 
 @Component({
     selector: 'manager-form',

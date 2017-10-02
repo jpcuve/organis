@@ -6,40 +6,8 @@ import {Observable} from "rxjs/Observable";
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import {Domain, Person, Product, Role, Territory} from "./domain";
 
-export interface NamedNode {
-    id: string;
-    parentId?: string;
-    name: string;
-    children?: NamedNode[];
-}
-
-export interface Person {
-    id: number;
-    name: string;
-}
-
-export interface Domain {
-    id: number;
-    name: string;
-}
-
-export interface Product {
-    id: number;
-    name: string;
-}
-
-export interface Role extends NamedNode {
-    splitDomain: string;
-}
-
-export interface Territory extends NamedNode {
-}
-
-export class Manager {
-    constructor(public name: string, public sex: string){
-    }
-}
 
 @Injectable()
 export class RemoteService {
@@ -47,7 +15,7 @@ export class RemoteService {
 
     constructor(private http: Http) {
         let w: Window = <Window> window;
-        let cs: string[] = (parseInt(w.location.port) >= 63342 ? ['http://', w.location.hostname, ':8080'] : []);
+        let cs: string[] = (parseInt(w.location.port) < 8080 ? ['http://', w.location.hostname, ':8080'] : []);
         this.base = cs.concat(['/api']).join('');
         console.info('base:', this.base);
     }

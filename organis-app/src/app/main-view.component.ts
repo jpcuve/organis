@@ -1,9 +1,11 @@
 import {Component, OnInit, Type} from '@angular/core';
-import {Domain, NamedNode, Person, Product, RemoteService, Role, Territory} from "./remote.service";
+import {RemoteService} from "./remote.service";
 import {InnerComponent} from "./inner.component";
 import {TerritoryComponent} from "./territory.component";
 import {RoleComponent} from "./role.component";
 import {MenuItem} from "primeng/primeng";
+import {Domain, Person, Product, Role, Territory} from "./domain";
+import {TreeNamedNode} from "./domain/TreeNamedNode";
 
 @Component({
     templateUrl: './main-view.component.html'
@@ -23,9 +25,9 @@ export class MainViewComponent implements OnInit {
         console.log('Main component starting now');
     }
 
-    pack(nodeList: NamedNode[]): NamedNode {
-        let top: NamedNode = null;
-        let map: { [key: string]: NamedNode } = {};
+    pack(nodeList: TreeNamedNode[]): TreeNamedNode {
+        let top: TreeNamedNode = null;
+        let map: { [key: string]: TreeNamedNode } = {};
         nodeList.forEach(n => {
             map[n.id] = n;
             n.children = [];

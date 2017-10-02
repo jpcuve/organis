@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 import {NamedNodeComponent} from "./named-node.component";
-import {Role} from "./remote.service";
+import {Role} from "./domain";
 
 @Component({
     template: `<span><a [routerLink]="['/roles', role.id]">{{role.name}}</a></span>`
