@@ -12,7 +12,7 @@ import {Observable} from "rxjs/Observable";
 export class TerritoryViewComponent implements OnInit {
 
     constructor(
-        private activatedRoute: ActivatedRoute,
+        public activatedRoute: ActivatedRoute,
         private remoteService: RemoteService
     ){
         console.log('Territory view component starting now');

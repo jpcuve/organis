@@ -25,6 +25,7 @@ import {TerritoryViewComponent} from "./territory-view.component";
 import {AppComponent} from "./app.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AccordionModule, BreadcrumbModule, ButtonModule, PanelModule} from "primeng/primeng";
+import {Blam} from "./blam.directive";
 
 const routes: Routes = [
     { path: 'main', component: MainViewComponent },
@@ -63,6 +64,7 @@ const routes: Routes = [
         RoleComponent,
         Zap,
         Pair,
+        Blam,
         AnchorDirective
     ],
     entryComponents: [

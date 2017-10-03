@@ -12,7 +12,7 @@ import {Observable} from "rxjs/Observable";
 export class RoleViewComponent implements OnInit {
 
     constructor(
-        private activatedRoute: ActivatedRoute,
+        public activatedRoute: ActivatedRoute,
         private remoteService: RemoteService
     ){
         console.log('Role view component starting now');
