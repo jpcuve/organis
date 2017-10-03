@@ -82,10 +82,10 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.5.0</version>
+                <version>1.4.0</version>
                 <executions>
                     <execution>
-                        <id>npm install</id>
+                        <id>npm update</id>
                         <goals>
                             <goal>exec</goal>
                         </goals>
@@ -105,7 +105,7 @@
                         </goals>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <executable>node_modules/@angular/cli/bin/ng</executable>
+                            <executable>ng</executable>
                             <arguments>
                                 <argument>build</argument>
                                 <argument>--prod</argument>
