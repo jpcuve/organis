@@ -22,7 +22,6 @@ import {InnerComponent} from "./inner.component";
 import {TerritoryComponent} from "./territory.component";
 import {RoleViewComponent} from "./role-view.component";
 import {TerritoryViewComponent} from "./territory-view.component";
-import {AppComponent} from "./app.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AccordionModule, BreadcrumbModule, ButtonModule, PanelModule} from "primeng/primeng";
 import {Blam} from "./blam.directive";
@@ -50,7 +49,6 @@ const routes: Routes = [
       FormsModule
     ],
     declarations: [
-      AppComponent,
         AppViewComponent,
         MainViewComponent,
         RoleViewComponent,
