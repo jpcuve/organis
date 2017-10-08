@@ -9,6 +9,16 @@ import 'rxjs/add/operator/map';
 import {Domain, Person, Product, Role, Territory} from "./domain";
 
 
+export interface RoleViewModel {
+    territories: Territory[];
+    role: Role;
+}
+
+export interface TerritoryViewModel {
+    roles: Role[];
+    territory: Territory;
+}
+
 @Injectable()
 export class RemoteService {
     base: string;
@@ -21,23 +31,31 @@ export class RemoteService {
     }
 
     getPersons(): Observable<Person[]> {
-        return this.http.get(this.base + "/persons").map(r => <Person[]> r.json());
+        return this.http.get(this.base + '/persons').map(r => r.json() as Person[]);
     }
 
     getDomains(): Observable<Domain[]> {
-        return this.http.get(this.base + "/domains").map(r => <Domain[]> r.json());
+        return this.http.get(this.base + '/domains').map(r => r.json() as Domain[]);
     }
 
     getProducts(): Observable<Product[]> {
-        return this.http.get(this.base + "/products").map(r => <Product[]> r.json());
+        return this.http.get(this.base + '/products').map(r => r.json() as Product[]);
     }
 
     getRoles(): Observable<Role[]> {
-        return this.http.get(this.base + "/roles").map(r => <Role[]> r.json());
+        return this.http.get(this.base + '/roles').map(r => r.json() as Role[]);
     }
 
     getTerritories(): Observable<Territory[]> {
-        return this.http.get(this.base + "/territories").map(t => <Territory[]> t.json());
+        return this.http.get(this.base + '/territories').map(t => t.json() as Territory[]);
+    }
+
+    getRoleViewModel(id: string): Observable<RoleViewModel> {
+        return this.http.get(this.base + '/roles/' + id).map(m => m.json() as RoleViewModel);
+    }
+
+    getTerritoryViewModel(id: string): Observable<TerritoryViewModel> {
+        return this.http.get(this.base + '/territories/' + id).map(m => m.json() as TerritoryViewModel);
     }
 
 }

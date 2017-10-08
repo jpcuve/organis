@@ -80,4 +80,12 @@ public class DataFacade {
         return em.createNamedQuery(Product.PRODUCT_ALL, Product.class).getResultList();
     }
 
+    public List<Team> findTeamsByRole(Role role){
+        return em.createNamedQuery(Team.TEAM_BY_ROLE, Team.class).setParameter("role", role).getResultList();
+    }
+
+    public List<Team> findTeamsByTerritory(Territory territory){
+        return em.createNamedQuery(Team.TEAM_BY_TERRITORY, Team.class).setParameter("territory", territory).getResultList();
+    }
+
 }

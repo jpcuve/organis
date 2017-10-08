@@ -83,3 +83,23 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+        - createTable:
+            tableName: teams
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role_id
+                  type: int
+              - column:
+                  name: territory_id
+                  type: int
+              - column:
+                  name: manager
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
