@@ -1,20 +1,25 @@
 import {Component, OnInit} from '@angular/core';
-import {RemoteService} from "./remote.service";
-import {ActivatedRoute} from "@angular/router";
+import {RemoteService, RoleViewModel} from "./remote.service";
+import {ActivatedRoute, Params} from "@angular/router";
+import {switchMap} from "rxjs/operators";
+import {Role} from "./domain";
 
 @Component({
-    template: `<span>role: {{activatedRoute.snapshot.params['id']}}</span>`
+    template: `<span>Role: {{role|json}}</span>`
 })
 export class RoleViewComponent implements OnInit {
+  role: Role;
 
-    constructor(
-        public activatedRoute: ActivatedRoute,
-        private remoteService: RemoteService
-    ){
-        console.log('Role view component starting now');
-    }
+  constructor(
+      public activatedRoute: ActivatedRoute,
+      private remoteService: RemoteService
+  ){
+      console.log('Role view component starting now');
+  }
 
-    ngOnInit(): void {
-      console.log('Role id:', this.activatedRoute.snapshot.paramMap.get('id'));
-    }
+  ngOnInit(): void {
+    this.activatedRoute.params
+      .pipe(switchMap((params: Params) => this.remoteService.getRoleViewModel(params['id'])))
+      .subscribe((roleViewModel: RoleViewModel) => this.role = roleViewModel.role);
+  }
 }

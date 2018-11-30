@@ -1,20 +1,25 @@
 import {Component, OnInit} from '@angular/core';
-import {RemoteService} from "./remote.service";
-import {ActivatedRoute} from "@angular/router";
+import {RemoteService, TerritoryViewModel} from "./remote.service";
+import {ActivatedRoute, Params} from "@angular/router";
+import {switchMap} from "rxjs/operators";
+import {Territory} from "./domain";
 
 @Component({
-    template: `<span>territory: {{activatedRoute.snapshot.params['id']}}</span>`
+    template: `<span>Territory: {{territory|json}}</span>`
 })
 export class TerritoryViewComponent implements OnInit {
+  territory: Territory = null;
 
-    constructor(
-        public activatedRoute: ActivatedRoute,
-        private remoteService: RemoteService
-    ){
-        console.log('Territory view component starting now');
-    }
+  constructor(
+      public activatedRoute: ActivatedRoute,
+      private remoteService: RemoteService
+  ){
+      console.log('Territory view component starting now');
+  }
 
-    ngOnInit(): void {
-      console.log('Territory id:', this.activatedRoute.snapshot.paramMap.get('id'));
-    }
+  ngOnInit(): void {
+    this.activatedRoute.params
+      .pipe(switchMap((params: Params) => this.remoteService.getTerritoryViewModel(params['id'])))
+      .subscribe((territoryViewModel: TerritoryViewModel) => this.territory = territoryViewModel.territory);
+  }
 }
